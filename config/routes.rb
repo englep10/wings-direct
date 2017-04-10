@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   get 'contact_me' => 'static_pages#contact_me'
+  get 'citation_cj' => 'static_pages#citation_cj'
 
   resources 'contact_requests', :only => [:new, :create]
 

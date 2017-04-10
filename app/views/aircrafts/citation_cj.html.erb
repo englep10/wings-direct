@@ -1,0 +1,87 @@
+<%= form_for [@contact_request] do |f| %>
+
+
+  <div class="first-question">
+    <div class="top_row">
+      <a class="waves-effect waves-light btn-large" id="FTE">Full Time Employer</a>
+      <a class="waves-effect waves-light btn-large" id="FO">Freelance Opportunity</a>
+    </div>
+    <div class="bottom_row">
+      <a class="waves-effect waves-light btn-large" id="REC">Recruiter</a>
+      <a class="waves-effect waves-light btn-large" id="FRI">Friend</a>
+    </div>
+    <%= f.hidden_field :purpose, :class => "purpose"%>
+  </div>
+
+  <div class="fte-first-panel">
+    <div class="center-card">
+      <div class="col s12">
+        <div class="card darken-3 fte-card">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+          </div>
+
+          <div class="input-field col s12">
+            <i class="material-icons prefix">business</i>
+            <%= f.label :company %>
+            <%= f.text_field :company %>
+          </div>
+
+          <div class="input-field col s12">
+            <i class="material-icons prefix">phone</i>
+            <%= f.label :phone %>
+            <%= f.text_field :phone %>
+          </div>
+
+          <div class="input-field col s12">
+            <i class="material-icons prefix">email</i>
+            <%= f.label :email %>
+            <%= f.text_field :email %>
+          </div>
+        </div>
+      </div>
+      <div class="next-prev-button">
+        <a class="btn-floating btn-large waves-effect waves-light fte-previous left-align"><i class="material-icons" id="previous-fte">skip_previous</i></a>
+        <a class="btn-floating btn-large waves-effect waves-light fte-next right-align"><i class="material-icons" id="next-fte">skip_next</i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="fte-second-panel">
+    <div class="center-card">
+      <div class="col s12">
+        <div class="card darken-3 fte-card">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">supervisor_account</i>
+            <%= f.label :role %>
+            <%= f.text_field :role %>
+          </div>
+
+          <div class="input-field col s12">
+            <i class="material-icons prefix">settings</i>
+            <%= f.label :stack %>
+            <%= f.text_field :stack %>
+          </div>
+
+          <div class="input-field col s12">
+            <i class="material-icons prefix">forum</i>
+            <%= f.label :message %>
+            <%= f.text_field :message %>
+          </div>
+          <div class="input-field col s12">
+            <input type="date" class="datepicker col s12" placeholder="Pick a day to talk.">
+          </div>
+        </div>
+      </div>
+      <div class="prev-submit">
+        <a class="btn-floating btn-large waves-effect waves-light fte-previous left-align"><i class="material-icons" id="previous-fte">skip_previous</i></a>
+        <button class="btn waves-effect waves-light right-align submit" type="submit" name="action" id="submit">Submit
+          <i class="material-icons right send" id="send">send</i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+<% end %>
