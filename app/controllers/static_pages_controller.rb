@@ -7,6 +7,6 @@ class StaticPagesController < ApplicationController
   end
 
   def citation_cj
-    @contact_request = ContactRequest.new
+    @citation_cj = CitationCj.new
   end
 end
